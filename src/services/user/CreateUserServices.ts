@@ -1,20 +1,24 @@
 import { PrismaClient } from "@prisma/client"
-
+import { isValidEmail } from "../../utils/customFunctions"
 const prisma = new PrismaClient()
 
-async function create (dados:any) {
-
-  {
-    const { name, email } = dados
-
-    const newUser = await prisma.users.create({
-      data: {
-        name,//name: name
-        email,
-        pwd: "123" //colocar autentificação 
-      }
-    })
-    return newUser
-  }
+interface IProps {
+  name: string
+  email: string
+  pwd?: string
 }
-export default create
+
+async function run({ name, email, pwd }: IProps) {
+
+  if (!isValidEmail(email)) {
+    throw new Error("deu ruim")
+  }
+
+  const newUser = await prisma.users.create({
+    data: {      name,      email,      pwd: "123" //colocar autentificação 
+    }
+  })
+  return newUser
+}
+
+export default run
