@@ -6,8 +6,9 @@ const appRoutes = Router()
 
 // .use {qualquer metodo} GET, POST, DELETE, PATCH, etc...
 
-appRoutes.get('/', (_, res) => { return res.send('Server On!') })
-
+appRoutes.get('/', (_, res) => {
+  return res.send('Server On!')
+})
 
 appRoutes.use('/users', userRoutes)
 

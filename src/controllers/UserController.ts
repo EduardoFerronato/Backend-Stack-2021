@@ -3,6 +3,7 @@ import { RequestHandler } from 'express'
 import { PrismaClient } from '@prisma/client'
 
 import createUserServices from '../services/user/CreateUserServices'
+import deleteUserServices from '../services/user/DeleteUserServices'
 
 const prisma = new PrismaClient()
 
@@ -43,10 +44,9 @@ const update: RequestHandler = async (req, resp) => {
 
 const deleteX: RequestHandler = async (req, resp) => {
   const userId = req.params.id
-  const result = await prisma.users.delete({
-    where: { id: Number(userId) },
-  })
-  return resp.json(result)
+  await deleteUserServices({ userId: Number(userId) })
+
+  return resp.json()
 }
 
 export default {

@@ -1,11 +1,12 @@
-import userController from "../controllers/UserController"
-import { Router } from "express"
+import { Router } from 'express'
+
+import userController from '../controllers/UserController'
 
 const userRouter = Router()
 
 // CRUD -- Create, Read ( index, show ), Update, Delete
 // show mostrar apenas "UM"
-// index listar usuários (normalmente tem query params para filtros, paginação -- 
+// index listar usuários (normalmente tem query params para filtros, paginação --
 // -- EX ?genero=Masculino )
 
 // GET|DELETE não tem body
