@@ -1,0 +1,14 @@
+_id: env_b745d5b194144ab5a5a348f4e5152cae
+type: Environment
+parentId: env_e7f8eddb06fb76f67558a24b9944b10a33c236ff
+modified: 1642895946974
+created: 1642895889264
+name: production
+data:
+  host: https://serve.excelsolutions.com.br
+dataPropertyOrder:
+  "&":
+    - host
+color: "#fbff00"
+isPrivate: false
+metaSortKey: 1642895889264

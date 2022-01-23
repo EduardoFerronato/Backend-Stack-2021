@@ -1,0 +1,30 @@
+_id: req_af04f898d90f4013a64a456fe7373537
+type: Request
+parentId: fld_7e1ee01b88b14c45bf3aa350dcd27904
+modified: 1642896224059
+created: 1642895182311
+url: "{{ _.host }}/users/3"
+name: update
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "joao",
+    	"email": "jj"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_58b50cb220854a2cb5fa557b9c19cdef
+authentication: {}
+metaSortKey: -1642895080671.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

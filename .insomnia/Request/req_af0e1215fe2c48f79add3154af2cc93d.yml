@@ -1,0 +1,21 @@
+_id: req_af0e1215fe2c48f79add3154af2cc93d
+type: Request
+parentId: fld_7e1ee01b88b14c45bf3aa350dcd27904
+modified: 1642906869368
+created: 1642895078479
+url: "{{ _.host }}/users/9"
+name: delete
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1642895057825
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

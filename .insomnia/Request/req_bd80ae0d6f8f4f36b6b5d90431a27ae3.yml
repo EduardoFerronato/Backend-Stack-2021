@@ -1,0 +1,30 @@
+_id: req_bd80ae0d6f8f4f36b6b5d90431a27ae3
+type: Request
+parentId: fld_7e1ee01b88b14c45bf3aa350dcd27904
+modified: 1642906540837
+created: 1642895057775
+url: "{{ _.host }}/users"
+name: create
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name":"Edaurdo",
+    	"email":"lu@as.xx. "
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_b0813b356485476191fa924e76c003e5
+authentication: {}
+metaSortKey: -1642895103568
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
