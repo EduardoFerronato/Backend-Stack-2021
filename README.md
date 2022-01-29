@@ -7,7 +7,7 @@
  > Controllers, Services, e 'Prisma'
  * Controller: Requisição, redirecionamento, Resposta;
  * Service: Processa a requisição e retorna resultado;
- * 'Prisma': 
+ * 'Prisma':
     * manipulador do banco de dados
     * já tem os modelos do banco, para ser acessado pelo Service;
 
@@ -18,3 +18,9 @@
 ## Libs
   * *Express*
     * É a lib (biblioteca/package/framework), pacote de recursos para criar e manipular um servidor (api)
+
+
+# OBJETIVOS
+  [*] Configurar prisma (Migrations, seed)
+  [*] CRUD user
+    [ ] Add bcrypt para salvar as senhas no banco;

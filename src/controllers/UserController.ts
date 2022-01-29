@@ -4,6 +4,8 @@ import { PrismaClient } from '@prisma/client'
 
 import createUserServices from '../services/user/CreateUserServices'
 import deleteUserServices from '../services/user/DeleteUserServices'
+import indexUserServices from '../services/user/IndexUserServices'
+import showUserServices from '../services/user/ShowUserServices'
 
 const prisma = new PrismaClient()
 
@@ -15,19 +17,17 @@ const create: RequestHandler = async (req, resp) => {
 }
 
 const index: RequestHandler = async (req, resp) => {
-  const users = await prisma.users.findMany()
+  const users = await indexUserServices()
 
   return resp.json(users)
 }
 
 const show: RequestHandler = async (req, resp) => {
-  const userId = req.params.id
+  const userId = req.params.id // string
 
-  const user = await prisma.users.findUnique({
-    where: { id: Number(userId) },
-  })
+  await showUserServices({ id: Number(userId) })
 
-  return resp.json(user)
+  return resp.json(showUserServices({ id: Number(userId) }))
 }
 
 const update: RequestHandler = async (req, resp) => {
