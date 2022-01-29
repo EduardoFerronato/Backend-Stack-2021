@@ -23,4 +23,7 @@
 # OBJETIVOS
   [*] Configurar prisma (Migrations, seed)
   [*] CRUD user
-    [ ] Add bcrypt para salvar as senhas no banco;
+    [*] Add bcryptjs para salvar as senhas no banco;
+    [*] Soft-delete
+    [*] Route Index, com paginação;
+  [ ] Create e Validate Session (sessão autenticada);

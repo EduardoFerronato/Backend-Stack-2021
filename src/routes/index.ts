@@ -1,5 +1,6 @@
 import { Router } from 'express'
 
+import sandboxRoutes from './sandbox.routes'
 import userRoutes from './user.routes'
 
 const appRoutes = Router()
@@ -11,5 +12,6 @@ appRoutes.get('/', (_, res) => {
 })
 
 appRoutes.use('/users', userRoutes)
+appRoutes.use('/sandbox', sandboxRoutes)
 
 export default appRoutes

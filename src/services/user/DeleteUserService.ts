@@ -15,9 +15,16 @@ async function run({ userId }: IProps) {
   if (!user) {
     throw new AppError('Usuário não encontrado')
   }
+  // await prisma.users.delete({
+  //   where: { id: userId },
+  // })
 
-  await prisma.users.delete({
+  // soft-delete: ao invés de deletar, apenas "marca" que deletou
+  await prisma.users.update({
     where: { id: userId },
+    data: {
+      deleted_at: new Date(),
+    },
   })
 }
 

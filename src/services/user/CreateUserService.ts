@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 
+import { hash } from 'bcryptjs'
+
 import { AppError } from '../../configs/errors/AppError'
 import { isValidEmail } from '../../utils/customFunctions'
 const prisma = new PrismaClient()
@@ -15,11 +17,13 @@ async function run({ name, email, pwd }: IProps) {
     throw new AppError('Email Inválido')
   }
 
+  const newPwd = await hash(pwd ?? '123', 8)
+
   const newUser = await prisma.users.create({
     data: {
       name,
       email,
-      pwd: pwd ?? '123', // colocar autentificação
+      pwd: newPwd,
     },
   })
   return newUser
